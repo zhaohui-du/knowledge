@@ -1,0 +1,23 @@
+{% extends "study/base_admin.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统添加</title>
+</head>
+<body>
+{% block content %}
+    <h2>系统添加</h2>
+
+    <form action="{% url 'study:system_add' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" class="form-control" name="system_name" placeholder="要添加的系统名">
+        </div>
+
+        <button type="submit" class="btn btn-primary" name="system_add" value="添加">添加</button>
+    </form>
+
+{% endblock content %}
+</body>
+</html>

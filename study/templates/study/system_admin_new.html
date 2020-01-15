@@ -1,0 +1,112 @@
+{% extends "study/base_admin.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统管理</title>
+</head>
+<body>
+{% block content %}
+
+    <ol class="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a class="btn btn-primary" href="{% url 'study:to_operation' 'system' 'add' %}"
+                   data-toggle="modal" data-target="#systemAdd">系统添加</a>
+            </li>
+        </ol>
+    </ol>
+
+    <div class="modal fade" id="systemAdd" tabindex="-1" role="dialog" aria-labelledby="systemAddLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="systemAddLabel">系统添加</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'study:system_add' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="system_name" placeholder="要添加的系统名">
+                        </div>
+
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary" name="system_add" value="添加">
+                                添加
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <h1>{{ message }}</h1>
+
+    {% if system_list %}
+        <div class="card">
+            <ul class="list-group list-group-flush">
+                {% for system in system_list %}
+                    <li class="list-group-item">
+                        <a href="{% url 'study:system_pdf_admin' system.system_name %}" target="_blank">
+                            <span class="glyphicon glyphicon-folder-open"> {{ system.system_name }}</span>
+                        </a>
+                        <button type="button" class="btn btn-danger float-right" data-toggle="modal"
+                                data-target="#systemDelete" data-whatever={{ system.system_name }}>
+                            删除
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <div class="modal fade" id="systemDelete" tabindex="-1" role="dialog" aria-labelledby="systemDeleteLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="systemDeleteLabel">确定要删除该系统么</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'study:system_delete' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" readonly="readonly" name="system_name">
+                        </div>
+
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary justify-content-end" name="system_delete"
+                                    value="确定">
+                                确定
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#systemDelete').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // 触发事件的按钮
+            var recipient = button.data('whatever') // 解析出data-whatever内容
+            var modal = $(this)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+
+{% endblock content %}
+
+</body>
+</html>

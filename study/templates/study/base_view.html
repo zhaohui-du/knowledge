@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1/css/bootstrap.min.css' %}"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{% url 'study:index' %}">首页</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'study:system_view' %}">浏览 <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="{% url 'study:pdf_file_search' %}" method="post"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="text" name="file_name" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">查找</button>
+        </form>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock content %}
+
+
+</body>

@@ -1,0 +1,23 @@
+{% extends "study/base_admin.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档上传</title>
+</head>
+<body>
+{% block content %}
+    <h1>文档上传</h1>
+
+    <form action="{% url 'study:pdf_file_upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="file" class="form-control-file" name="file" multiple="multiple"><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary" name="upload" value="上传文档"></button>
+    </form>
+{% endblock content %}
+</body>
+</html>

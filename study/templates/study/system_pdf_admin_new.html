@@ -1,0 +1,117 @@
+{% extends "study/base_admin.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档管理</title>
+</head>
+<body>
+{% block content %}
+
+    <ol class="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a class="btn btn-primary" href="{% url 'study:to_operation' 'pdf_file' 'upload' %}"
+                   data-toggle="modal" data-target="#pdfFileAdd">文档添加</a>
+            </li>
+        </ol>
+    </ol>
+
+    <div class="modal fade" id="pdfFileAdd" tabindex="-1" role="dialog" aria-labelledby="pdfFileAddLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfFileAddLabel">PDF文档添加</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'study:pdf_file_upload' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" name="file" multiple="multiple"><br>
+                        </div>
+
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary" name="file_upload" value="上传">
+                                上传
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1>{{ message }}</h1>
+
+    {% if system_pdf_list %}
+        <div class="card">
+            <ul class="list-group list-group-flush">
+                {% for system_pdf in system_pdf_list %}
+                    <li class="list-group-item">
+                        <a href={{ system_pdf.file_url }} target="_blank">
+                            <span class="glyphicon glyphicon-folder-open"> {{ system_pdf.file_name }}</span>
+                        </a>
+                        <button type="button" class="btn btn-danger float-right" data-toggle="modal"
+                                data-target="#pdfFileDelete" data-whatever={{ system_pdf.file_name }}>
+                            删除
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <div class="modal fade" id="pdfFileDelete" tabindex="-1" role="dialog" aria-labelledby="pdfFileDeleteLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="systemDeleteLabel">确定要删除该文件么</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'study:pdf_file_delete' %}" method="post">
+                        {% csrf_token %}
+                        {#                        <div class="form-group">#}
+                        {#                            <label for="system_name">所属系统：</label>#}
+                        {#                            <input type="text" class="form-control" id="system_name" readonly="readonly"#}
+                        {#                                   name="system_name" value={{ system_name }}>{{ system_name }}#}
+                        {#                        </div>#}
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" readonly="readonly" name="file_name">
+                        </div>
+
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary" name="file_delete"
+                                    value="确定">
+                                确定
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#pdfFileDelete').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // 触发事件的按钮
+            var recipient = button.data('whatever') // 解析出data-whatever内容
+            var modal = $(this)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+
+{% endblock content %}
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1319516f-f170-497b-b977-b5cf10d1c86a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/bootstrap-4.4.1/js/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/bootstrap-4.4.1/js/jquery-3.4.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/bootstrap-4.4.1/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/templates/study/base_admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/templates/study/base_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/templates/study/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/templates/study/system_admin_new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/templates/study/system_pdf_admin_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/IMES/IMES-test1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/operation_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/operation_result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/pdf_file_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/pdf_file_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/pdf_file_delete_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/pdf_file_delete_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/pdf_file_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/pdf_file_upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_delete_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_delete_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_pdf_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_pdf_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_pdf_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_pdf_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/study/system_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_view.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1UAxPpr343ToY0FGWymtos2cvFo" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\PyCharm\cms-knowledge\static\bootstrap-4.4.1\js" />
+      <recent name="D:\WorkSpace\PyCharm\knowledge\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\PyCharm\cms-knowledge\study" />
+      <recent name="D:\WorkSpace\PyCharm\knowledge\templates\study" />
+      <recent name="D:\WorkSpace\PyCharm\knowledge\templates\study\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.0001_initial">
+    <configuration name="0001_initial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="knowledge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/study/migrations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/study/migrations/0001_initial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="0002_user" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="knowledge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/study/migrations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/study/migrations/0002_user.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="knowledge" type="Python.DjangoServer" factoryName="Django server">
+      <module name="knowledge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.0001_initial" />
+        <item itemvalue="Python.0002_user" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.27175462" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6501565" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6501565" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@57cf695e" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c3e8d5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c3e8d5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4fccfa89" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1319516f-f170-497b-b977-b5cf10d1c86a" name="Default Changelist" comment="" />
+      <created>1574813179192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574813179192</updated>
+      <workItem from="1574813180648" duration="25132000" />
+      <workItem from="1574854202412" duration="15039000" />
+      <workItem from="1574985527864" duration="1756000" />
+      <workItem from="1574987312801" duration="17226000" />
+      <workItem from="1575028015384" duration="10187000" />
+      <workItem from="1575073211042" duration="13437000" />
+      <workItem from="1576656023943" duration="583000" />
+      <workItem from="1576893730464" duration="28276000" />
+      <workItem from="1576974862919" duration="6270000" />
+      <workItem from="1576986523970" duration="3290000" />
+      <workItem from="1577058783081" duration="6000" />
+      <workItem from="1577058821161" duration="3630000" />
+      <workItem from="1577095687108" duration="748000" />
+      <workItem from="1577231738459" duration="16704000" />
+      <workItem from="1577323671330" duration="15737000" />
+      <workItem from="1577407892014" duration="6120000" />
+      <workItem from="1577582553652" duration="3153000" />
+      <workItem from="1577663448910" duration="5402000" />
+      <workItem from="1578099352852" duration="28109000" />
+      <workItem from="1578315483327" duration="601000" />
+      <workItem from="1578316288003" duration="5672000" />
+      <workItem from="1578489137361" duration="1271000" />
+      <workItem from="1578520097912" duration="3000" />
+      <workItem from="1578577297420" duration="1201000" />
+      <workItem from="1578879740243" duration="7197000" />
+      <workItem from="1578965359137" duration="379000" />
+      <workItem from="1578965747377" duration="31739000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cms_knowledge$0001_initial.coverage" NAME="0001_initial Coverage Results" MODIFIED="1578965534448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study/migrations" />
+    <SUITE FILE_PATH="coverage/cms_knowledge$0002_user.coverage" NAME="0002_user Coverage Results" MODIFIED="1578965524872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study/migrations" />
+  </component>
+</project>

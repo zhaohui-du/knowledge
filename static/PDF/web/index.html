@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="preview()">预览</button>
+</body>
+
+<script>
+    function preview() {
+        var pdf = 'compressed.tracemonkey-pldi-09.pdf';
+        window.open('http://127.0.0.1:8000/static/PDF/web/viewer.html?file=http://127.0.0.1:8000/static/PDF/web/' + pdf, 'PDF');
+    }
+</script>
+</html>

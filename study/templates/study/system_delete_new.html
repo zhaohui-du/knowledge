@@ -1,0 +1,54 @@
+{% extends "study/base_admin.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统删除</title>
+</head>
+<body>
+{% block content %}
+
+    <form action="{% url 'study:systems_delete' %}" method="post">
+        {% csrf_token %}
+        <div class="form-check">
+            {% if system_list %}
+                {% for system in system_list %}
+                    <input type="checkbox" class="form-check-input" name="delete_system_list"
+                           value="{{ system.system_name }}">
+                    {{ system.system_name }}<br>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        {#        <button type="submit" class="btn btn-primary" name="system_delete" value="删除">删除</button>#}
+
+        <button type="button" class="btn btn-primary" data-toggle="modal">
+            删除
+        </button>
+
+        <div class="modal fade" id="systemDelete" tabindex="-1" role="dialog"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="systemDeleteLabel">删除系统</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        确定要删除该系统么？
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock content %}
+</body>
+</html>

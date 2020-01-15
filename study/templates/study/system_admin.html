@@ -1,0 +1,41 @@
+{% extends "study/base_admin.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统管理</title>
+</head>
+<body>
+{% block content %}
+    <ol class="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'study:to_operation' 'system' 'add' %}" target="_blank">系统添加</a>
+            </li>
+
+            {% if system_list %}
+                <li class="breadcrumb-item"><a href="{% url 'study:to_system_delete' %}" target="_blank">
+                    <span class="glyphicon glyphicon-remove">系统删除</span></a></li>
+            {% endif %}
+        </ol>
+    </ol>
+
+
+
+
+    <h1>{{ message }}</h1>
+
+    {% if system_list %}
+        <ul class="list-group">
+            {% for system in system_list %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'study:system_pdf_admin' system.system_name %}" target="_blank">
+                        <span class="glyphicon glyphicon-folder-open"> {{ system.system_name }}</span>
+                    </a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock content %}
+</body>
+</html>

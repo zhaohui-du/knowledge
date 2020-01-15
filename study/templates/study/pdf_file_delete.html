@@ -1,0 +1,22 @@
+{% extends "study/base_admin.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档删除</title>
+</head>
+<body>
+    {% block content %}
+    <h1>文档删除</h1>
+
+    <form action="{% url 'study:pdf_file_delete' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="file_name" placeholder="要删除的文件名"><br>
+        <input type="submit" name="file_delete" value="删除">
+    </form>
+
+    {% endblock content %}
+</body>
+</html>

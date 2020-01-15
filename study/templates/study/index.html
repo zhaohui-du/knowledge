@@ -1,0 +1,35 @@
+
+{% extends 'study/base_admin.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body style="background: #f5f5d5">
+    {% block content %}
+    
+
+    <h1 class="text-center">欢迎使用...</h1>
+    <ul class="list-group">      
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+    
+        <a  href="{% url 'study:system_view' %}" target="_blank">
+            <span class="glyphicon glyphicon-folder-open">制造系统手册预览</span>
+        </a>
+    
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{% url 'study:system_admin' %}" target="_blank">
+                    <span class="glyphicon glyphicon-folder-open">制造系统手册管理</span>
+                </a>
+        </li>
+
+    </ul>
+
+    {% endblock content %}
+
+</body>
+</html>

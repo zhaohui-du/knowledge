@@ -1,0 +1,29 @@
+{% extends "study/base_admin.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档删除</title>
+</head>
+<body>
+{% block content %}
+
+    <form action="{% url 'study:pdf_files_delete' %}" method="post">
+        {% csrf_token %}
+        <div class="form-check">
+            {% if system_pdf_list %}
+                {% for system_pdf in system_pdf_list %}
+                    <input type="checkbox" class="form-check-input" name="delete_pdf_list"
+                           value="{{ system_pdf.file_name }}">
+                    {{ system_pdf.file_name }}<br>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary" name="file_delete" value="删除"></button>
+    </form>
+
+{% endblock content %}
+</body>
+</html>

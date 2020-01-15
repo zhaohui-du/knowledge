@@ -1,0 +1,27 @@
+{% extends 'study/base_admin.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF预览</title>
+</head>
+<body>
+    {% block content %}
+
+    {% if system_pdf_list %}
+    <ul class="list-group">
+        {% for system_pdf in system_pdf_list %}
+        <li class="list-group-item">
+              <a href={{ system_pdf.file_url }} target="_blank">
+                    {{ system_pdf.file_name }}
+             </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+    {% endif %}
+    {% endblock content %}
+</body>
+</html>

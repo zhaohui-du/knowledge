@@ -1,0 +1,21 @@
+{% extends "study/base_admin.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统删除</title>
+</head>
+<body>
+    {% block content %}
+    <h1>系统删除</h1>
+
+    <form action="{% url 'study:system_delete' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="system_name" placeholder="要删除的系统名"><br>
+        <input type="submit" name="system_delete" value="删除">
+    </form>
+
+    {% endblock content %}
+</body>
+</html>
