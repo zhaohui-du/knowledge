@@ -4,17 +4,18 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1/css/bootstrap.min.css' %}"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap-4.4.1/js/jquery-3.4.1.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.4.1/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.4.1/js/bootstrap.min.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
-
 
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="{% url 'study:index' %}">首页</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand active" href="{% url 'study:view_index' %}">首页</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,17 +23,33 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'study:system_view' %}">浏览 <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'study:system_view' %}">浏览<span class="sr-only">(current)</span></a>
             </li>
-
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="{% url 'study:pdf_file_search' %}" method="post"
-              enctype="multipart/form-data">
-            {% csrf_token %}
-            <input class="form-control mr-sm-2" type="text" name="file_name" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">查找</button>
-        </form>
+
+        <div class="mx-5">
+            <form class="form-inline mr-auto" action="{% url 'study:pdf_file_search' %}" method="post">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="search" name="file_name" placeholder="Search"
+                       aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">查找</button>
+            </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            {% if request.session.is_login %}
+                <li class="nav-item">
+                    <span class="navbar-text">{{ request.session.user_name }}</span>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="{% url 'study:user_logout' %}" role="button">退出</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="{% url 'study:to_login' %}" role="button">登录</a>
+                </li>
+            {% endif %}
+        </ul>
     </div>
 </nav>
 

@@ -13,9 +13,14 @@ import shutil
 # Create your views here.
 
 
-# 首页
-def index(request):
-    return render(request, 'study/index.html')
+# 预览首页
+def view_index(request):
+    return render(request, 'study/view_index.html')
+
+
+# 管理首页
+def admin_index(request):
+    return render(request, 'study/admin_index.html')
 
 
 # 系统预览
@@ -417,7 +422,7 @@ def to_login(request):
 def user_login(request):
     # 不允许重复登陆
     if request.session.get('is_login', None):
-        return render(request, 'study/index.html')
+        return render(request, 'study/admin_index.html')
 
     if request.method == 'POST':
         print(request.POST)
@@ -435,7 +440,7 @@ def user_login(request):
                     request.session['user_id'] = user.id
                     request.session['user_name'] = user.username
                     # 分权限跳转页面
-                    return render(request, 'study/index.html')
+                    return render(request, 'study/admin_index.html')
                 else:
                     message = '输入密码错误，请重新输入'
                     return render(request, 'study/login.html', {'message': message})
@@ -449,6 +454,6 @@ def user_login(request):
 # 用户退出
 def user_logout(request):
     request.session['is_login'] = False
-    return render(request, 'study/index.html')
+    return render(request, 'study/view_index.html')
 
 # 用户注册（管理员权限）
