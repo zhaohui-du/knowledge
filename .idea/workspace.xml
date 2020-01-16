@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/templates/study/base_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/base_admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/templates/study/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/urls.py" afterDir="false" />
@@ -42,6 +43,11 @@
         <item name="db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -174,26 +180,7 @@
       <serviceView>
         <option name="contentProportion" value="0.27175462" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6501565" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6501565" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@57cf695e" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c3e8d5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c3e8d5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4fccfa89" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -237,6 +224,8 @@
       <workItem from="1578965359137" duration="379000" />
       <workItem from="1578965747377" duration="31739000" />
       <workItem from="1579056044607" duration="14051000" />
+      <workItem from="1579136310539" duration="1086000" />
+      <workItem from="1579137511360" duration="7450000" />
     </task>
     <servers />
   </component>

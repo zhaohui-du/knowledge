@@ -27,9 +27,10 @@ class PdfFile(models.Model):
 
 # 用户
 class User(models.Model):
-    email = models.CharField(max_length=200, unique=True)
+    username = models.CharField(max_length=200, unique=True)
     password = models.CharField(max_length=200)
     authority = models.IntegerField
+    user_comment = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.email
+        return self.username

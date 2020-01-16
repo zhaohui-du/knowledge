@@ -422,26 +422,33 @@ def user_login(request):
     if request.method == 'POST':
         print(request.POST)
         form = UserForm(request.POST)
+        message = ''
         if form.is_valid():
-            email = request.POST['email']
+            username = request.POST['username']
             password = request.POST['password']
             message = '所有字段都必须填写！'
-            if email and password:
-                email = str(email).strip()
-                try:
-                    user = User.objects.get(email=email)
-                    if user.password == password:
-                        request.session['is_login'] = True
-                        request.session['user_id'] = user.id
-                        request.session['user_email'] = user.email
-                        # 分权限跳转页面
-                        return render(request, 'study/index.html')
-                    else:
-                        message = '输入密码错误，请重新输入'
-                except:
-                    message = '此邮箱不存在'
-            return render(request, 'study/login.html', {'message': message})
+            if username and password:
+                username = str(username).strip()
+                user = get_object_or_404(User, username=username)
+                if user.password == password:
+                    request.session['is_login'] = True
+                    request.session['user_id'] = user.id
+                    request.session['user_name'] = user.username
+                    # 分权限跳转页面
+                    return render(request, 'study/index.html')
+                else:
+                    message = '输入密码错误，请重新输入'
+                    return render(request, 'study/login.html', {'message': message})
+
+        return render(request, 'study/login.html', {'message': message})
+
     form = UserForm()
     return render(request, 'study/login.html', {'form': form})
+
+
+# 用户退出
+def user_logout(request):
+    request.session['is_login'] = False
+    return render(request, 'study/index.html')
 
 # 用户注册（管理员权限）

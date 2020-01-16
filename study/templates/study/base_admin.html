@@ -55,11 +55,14 @@
         <ul class="nav navbar-nav navbar-right">
             {% if request.session.is_login %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: #FFFFFF">退出</a>
+                    <span class="navbar-text">{{ request.session.user_name }}</span>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="{% url 'study:user_logout' %}" role="button">退出</a>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'study:to_login' %}" style="color: #FFFFFF">登录</a>
+                    <a class="btn btn-primary" href="{% url 'study:to_login' %}" role="button">登录</a>
                 </li>
             {% endif %}
         </ul>

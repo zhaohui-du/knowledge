@@ -56,7 +56,7 @@ class SearchPdfFileForm(forms.Form):
 
 
 class UserForm(forms.Form):
-    email = forms.CharField(max_length=200)
+    username = forms.CharField(max_length=200)
     password = forms.CharField(max_length=200)
 
     def __str__(self):
