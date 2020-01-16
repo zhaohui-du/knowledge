@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1319516f-f170-497b-b977-b5cf10d1c86a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/bootstrap-4.4.1/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap-4.4.1/js/jquery-3.4.1.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap-4.4.1/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/templates/study/base_admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/templates/study/base_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/templates/study/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/templates/study/system_admin_new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/templates/study/system_pdf_admin_new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/IMES/IMES-test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/templates/study/base_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/base_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/templates/study/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/operation_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/operation_result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/pdf_file_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/pdf_file_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/pdf_file_delete_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/pdf_file_delete_new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/pdf_file_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/pdf_file_upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_delete_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_delete_new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_pdf_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_pdf_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_pdf_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_pdf_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/study/system_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/templates/study/system_view.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -263,6 +236,7 @@
       <workItem from="1578879740243" duration="7197000" />
       <workItem from="1578965359137" duration="379000" />
       <workItem from="1578965747377" duration="31739000" />
+      <workItem from="1579056044607" duration="14051000" />
     </task>
     <servers />
   </component>

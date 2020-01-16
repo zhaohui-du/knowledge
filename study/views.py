@@ -408,6 +408,11 @@ def pdf_file_search(request):
         return render(request, 'study/index.html', {'form': form})
 
 
+# 登录界面
+def to_login(request):
+    return render(request, 'study/login.html')
+
+
 # 用户登录
 def user_login(request):
     # 不允许重复登陆

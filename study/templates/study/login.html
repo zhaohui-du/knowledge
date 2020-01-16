@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% extends 'study/base_admin.html' %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,39 +6,36 @@
     <meta charset="UTF-8">
     <title>登录</title>
 </head>
-<body>
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<body style="background: #f5f5d5">
 
-<div class="container">
-    <div class="col-md-4 col-md-offset-4">
-        <form class="form-login" action="{% url '' %}" method="post">
-            {% if message %}
-                <div class="alert alert-warning"></div>
-            {% endif %}
-            {% csrf_token %}
-            <h2 class="text-center">欢迎登录</h2>
-            {#            <div class="form-group">#}
-            {#                <label for="id_email">邮 箱：</label>#}
-            {#                <input type="text" name="email" class="form-control" id="id_email" placeholder="邮 箱" autofocus#}
-            {#                       required><br>#}
-            {#            </div>#}
-            {#            <div class="form-group">#}
-            {#                <label for="id_password">密 码：</label>#}
-            {#                <input type="password" name="password" class="form-control" id="id_password" placeholder="密 码"#}
-            {#                       required><br>#}
-            {#            </div>#}
-            <div class="form-group">
-                {{ form.email.label_tag }}
-                {{ form.email }}
+{% block content %}
+    <div class="container-fluid mx-lg-5 my-lg-5">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form action="#" method="post">
+                    {% if message %}
+                        <div class="alert alert-warning"></div>
+                    {% endif %}
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_username">账 号：</label>
+                        <input type="text" name="username" class="form-control" id="id_username" placeholder="name"
+                               autofocus required>
+                        <small id="usernameHelp" class="form-text text-muted">请使用公司域账号登录</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_password">密 码：</label>
+                        <input type="password" name="password" class="form-control" id="id_password"
+                               placeholder="password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" name="login" value="登 录" href="#">登录</button>
+                </form>
             </div>
-            <div class="form-group">
-                {{ form.password.label_tag }}
-                {{ form.password }}
-            </div>
-            <button type="submit" class="btn btn-primary pull-right" name="login" value="登 录" href="#"></button>
-        </form>
+        </div>
     </div>
-</div>
 
+{% endblock %}
 </body>
 </html>
