@@ -19,6 +19,7 @@ class PdfFile(models.Model):
     file_name = models.CharField(max_length=200)
     file_path = models.CharField(max_length=200)
     file_url = models.CharField(max_length=200)
+    file_datetime = models.DateTimeField(auto_now=True)
     file_comment = models.CharField(max_length=200)
 
     def __str__(self):

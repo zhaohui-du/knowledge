@@ -14,7 +14,7 @@
     <ul class="list-group">
             {% for system in system_list %}
             <li class="list-group-item">
-                    <a href="{% url 'study:system_pdf_view' system.system_name %}" target="_blank">
+                    <a href="{% url 'study:system_pdf_view' system.system_name %}">
                              {{ system.system_name }}
                     </a>
             </li>

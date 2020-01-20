@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 import os
 import shutil
+import datetime
 
 
 # Create your views here.
@@ -86,6 +87,7 @@ def system_pdf_admin(request, system_name):
         context = {
             'system_pdf_list': [],
             'message': '暂无数据...',
+            'system_name': system_name
         }
         return render(request, 'study/system_pdf_admin_new.html', context)
 
@@ -140,14 +142,15 @@ def pdf_file_upload(request):
                     host = 'http://' + request.headers['Host']
                     print(host)
                     # PDF文件在线预览 url
-                    file_url = host + '/static/PDF/web/viewer.html?file=' + host + '/static/files/' + path.replace('\\',
-                                                                                                                   '/') \
-                               + '/' + file.name
+                    file_url = host + '/static/PDF/web/viewer.html?file=' + host + '/static/files/' + \
+                               path.replace('\\','/') + '/' + file.name
                     print(file_url)
                     system = get_object_or_404(ManufactureSystem, system_name=system_name)
+                    # 更新PDF时更新上传时间
+                    file_datetime = datetime.datetime.now().replace(microsecond=0)
                     # 数据库新增 PDF 文件并保存
                     pdf_file = PdfFile(manufacture_system=system, file_name=file.name, file_path=file_path,
-                                       file_url=file_url)
+                                       file_url=file_url, file_datetime=file_datetime)
                     pdf_file.save()
                 else:
                     # 若文件已存在，则删除本地文件并重新写入
@@ -156,10 +159,15 @@ def pdf_file_upload(request):
                     with open(pdf_file.file_path, 'wb') as destination:
                         for chunk in file.chunks():
                             destination.write(chunk)
+                    # 更新PDF时更新上传时间
+                    file_datetime = datetime.datetime.now().replace(microsecond=0)
+                    pdf_file.file_datetime = file_datetime
+                    pdf_file.save()
             system_pdf_list = PdfFile.objects.order_by('file_name')
             context = {
                 'system_pdf_list': system_pdf_list,
-                'message': ''
+                'message': '',
+                'system_name': system_name,
             }
             return HttpResponseRedirect(reverse('study:system_pdf_admin', args=(system_name,)), context)
         else:
